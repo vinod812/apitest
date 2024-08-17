@@ -7,6 +7,11 @@ on:
   pull_request:
     branches:
       - master  # or the branch you want to trigger the workflow
+  workflow_dispatch: # Allow manual trigger
+  
+  schedule:
+    - cron: "0 0 * * *"  # Runs every day at midnight (UTC)  Schedule:
+
 
 
 jobs:
