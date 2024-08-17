@@ -28,7 +28,7 @@ pipeline{
 			stage('Run REST Assured Tests') {
             			steps {
                 			// Run REST Assured tests
-                			bat 'mvn test -Dtest=test.apitest.RestTest1408'
+                			bat 'mvn test'
             		}
         }
 
