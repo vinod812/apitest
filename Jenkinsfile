@@ -7,5 +7,14 @@ pipeline{
 					echo "$GIT_BRANCH"
 				}
 			}
+			
+			stage("Run the Test")
+			{
+				steps {
+					echo "$GIT_BRANCH"
+				}
+			}
+			
+			
 	}
 }

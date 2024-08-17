@@ -37,7 +37,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.9</version>
-            <scope>test</scope>
+ 
         </dependency>
         
         <dependency>
@@ -77,4 +77,18 @@
         <version>4.3.3</version>
     </dependency>
   </dependencies>
+  
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Use the latest stable version -->
+            <configuration>
+                <source>8</source> <!-- or 11, 17 depending on your Java version -->
+                <target>8</target> <!-- or 11, 17 depending on your Java version -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>
