@@ -8,6 +8,7 @@ on:
     branches:
       - master  # or the branch you want to trigger the workflow
 
+
 jobs:
   build:
     runs-on: ubuntu-latest  # Use Ubuntu for running Maven commands
