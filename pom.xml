@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <artifactId>apitest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>my-app</name>
+  <name>apitest</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -25,7 +25,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
          <dependency>
             <groupId>io.rest-assured</groupId>
@@ -37,7 +37,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.9</version>
- 
+ <scope>compile</scope>
         </dependency>
         
         <dependency>
@@ -82,11 +82,14 @@
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> <!-- Use the latest stable version -->
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version> <!-- Use the latest stable version -->
             <configuration>
                 <source>8</source> <!-- or 11, 17 depending on your Java version -->
                 <target>8</target> <!-- or 11, 17 depending on your Java version -->
+                     <suiteXmlFiles>
+                    <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
             </configuration>
         </plugin>
     </plugins>

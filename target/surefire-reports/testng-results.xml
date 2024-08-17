@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-17T10:15:37Z" name="Suite" finished-at="2024-08-17T10:15:40Z" duration-ms="2809">
+    <groups>
+    </groups>
+    <test started-at="2024-08-17T10:15:37Z" name="Test" finished-at="2024-08-17T10:15:40Z" duration-ms="2809">
+      <class name="newpack.RestTest1408">
+        <test-method is-config="true" signature="startWireMock()[pri:0, instance:newpack.RestTest1408@5939a379]" started-at="2024-08-17T15:45:37Z" name="startWireMock" finished-at="2024-08-17T15:45:39Z" duration-ms="1459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWireMock -->
+        <test-method signature="restTesting()[pri:0, instance:newpack.RestTest1408@5939a379]" started-at="2024-08-17T15:45:39Z" name="restTesting" finished-at="2024-08-17T15:45:40Z" duration-ms="1146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restTesting -->
+        <test-method signature="restTesting1()[pri:0, instance:newpack.RestTest1408@5939a379]" started-at="2024-08-17T15:45:40Z" name="restTesting1" finished-at="2024-08-17T15:45:40Z" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restTesting1 -->
+        <test-method signature="restTesting2()[pri:0, instance:newpack.RestTest1408@5939a379]" started-at="2024-08-17T15:45:40Z" name="restTesting2" finished-at="2024-08-17T15:45:40Z" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restTesting2 -->
+        <test-method is-config="true" signature="stopWireMock()[pri:0, instance:newpack.RestTest1408@5939a379]" started-at="2024-08-17T15:45:40Z" name="stopWireMock" finished-at="2024-08-17T15:45:40Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWireMock -->
+      </class> <!-- newpack.RestTest1408 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
