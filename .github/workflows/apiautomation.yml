@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - master  # or the branch you want to trigger the workflow
+  pull_request:
+    branches:
+      - master  # or the branch you want to trigger the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use Ubuntu for running Maven commands
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      with:
+        repository: vinod812/apitest
+        token: ${{ secrets.GITHUB_TOKEN }}  # Ensures access to private repositories if needed
+
+    - name: Set Up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'  # Specify the Java version your Maven project uses
+
+    - name: Set Up Maven
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        maven-version: '3.9.8'  # Specify the Maven version
+
+    - name: Verify Branch
+      run: echo "Branch: ${{ github.ref }}"  # Prints the branch name
+
+    - name: Build with Maven
+      run: mvn clean install
+
+    - name: Run REST Assured Tests
+      run: mvn test
