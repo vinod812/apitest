@@ -30,7 +30,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        maven-version: '3.9.8'  # Specify the Maven version
+        #maven-version: '3.9.8'  # Specify the Maven version
 
     - name: Verify Branch
       run: echo "Branch:${{github.ref}}"  # Prints the branch name
