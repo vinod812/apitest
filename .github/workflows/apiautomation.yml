@@ -24,6 +24,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'  # Specify the Java version your Maven project uses
+        distribution: 'zulu'
 
     - name: Set Up Maven
       uses: actions/setup-java@v3
