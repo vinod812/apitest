@@ -83,7 +83,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.2.5</version> <!-- Use the latest stable version -->
+            <version>3.2.6</version> <!-- Use the latest stable version -->
             <configuration>
                 <source>8</source> <!-- or 11, 17 depending on your Java version -->
                 <target>8</target> <!-- or 11, 17 depending on your Java version -->
