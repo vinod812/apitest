@@ -80,11 +80,11 @@
         <version>4.3.3</version>
     </dependency>
   </dependencies>
-
 <distributionManagement>
     <snapshotRepository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/vinod812/apitest</url>
+        <id>snapshots</id>
+        <name>a0xqyc3apzg8v-artifactory-primary-0-snapshots</name>
+        <url>https://vkv.jfrog.io/artifactory/maven-test-snapshots</url>
     </snapshotRepository>
 </distributionManagement>
   
