@@ -27,9 +27,10 @@ pipeline{
        		}
 
 				stage('Run Deploy the build') {
-					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+					
             					steps {
                					 // Run REST Assured tests
+							catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
 			                		retry(3){
                 						bat 'mvn deploy'
 							}
