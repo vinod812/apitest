@@ -81,7 +81,13 @@
     </dependency>
   </dependencies>
 
-
+<distributionManagement>
+    <snapshotRepository>
+        <id>github</id>
+        <url>https://github.com/vinod812/apitest</url>
+    </snapshotRepository>
+</distributionManagement>
+  
 <build>
     <plugins>
         <plugin>
