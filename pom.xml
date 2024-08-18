@@ -84,7 +84,7 @@
 <distributionManagement>
     <snapshotRepository>
         <id>github</id>
-        <url>https://github.com/vinod812/apitest</url>
+        <url>https://maven.pkg.github.com/vinod812/apitest</url>
     </snapshotRepository>
 </distributionManagement>
   
