@@ -29,9 +29,12 @@ pipeline{
 				stage('Run Deploy the build') {
             	steps {
                 // Run REST Assured tests
+			                retry(3)
                 			bat 'mvn deploy'
             	}
         	}
+
+		
 
 			stage('Run REST Assured Tests') {
             	steps {
