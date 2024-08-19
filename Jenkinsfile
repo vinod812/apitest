@@ -49,4 +49,42 @@ pipeline{
 	
 		
 		}
+		
+		post{
+			always{
+				echo "Always run this"
+				cleanupWorkspace()
+			}
+			
+			success{
+			    echo 'The pipeline succeeded!'
+            	sendEmailNotification('Build Succeeded')
+			}
+		
+			failure {
+            	echo 'The pipeline failed.'
+            	sendEmailNotification('Build Failed')
+       		}
+       		
+       		unstable {
+            	echo 'The pipeline is unstable.'
+            	sendEmailNotification('Build Unstable')
+        	}
+        	
+        	unstable {
+            	echo 'The pipeline is unstable.'
+            	sendEmailNotification('Build Unstable')
+        	}
+		}
+}
+
+// Example functions that might be defined elsewhere in the Jenkinsfile
+def cleanupWorkspace() {
+    deleteDir() // Deletes the workspace to clean up after the build
+}
+
+def sendEmailNotification(String message) {
+	mail to: 'vinod812@gmail.com',
+	subject: "Jenkins Build: ${message}",
+    body: "The Jenkins build has finished with the status: ${message}"
 }
