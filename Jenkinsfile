@@ -30,7 +30,7 @@ pipeline{
        		}
 
            	// Use of try/catch
-           	stage('Run Deploy the build') {
+           	stage('Deploy:Error handling with try catch') {
 				steps {
 					script{
 					      try{
