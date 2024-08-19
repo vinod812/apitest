@@ -44,15 +44,22 @@ pipeline{
         		}
 			}
 			
-			// Deploy the build
-			stage('Run Deploy the build') {
+			// Use of catchError for error handling
+			stage('Deploy: Error handliong with catchError') {
 				steps {
 					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-			                		retry(3){
-                						bat 'mvn deploy'
-									}
+                		bat 'mvn deploy'
             		}
         		}
+			}
+			
+			// Use of retry for error handling
+			stage('Deploy:Use of retry for error handling') {
+				steps {
+			    		retry(3){
+                		bat 'mvn deploy'
+						}
+            		}
 			}
 		
 		
