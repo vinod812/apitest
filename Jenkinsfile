@@ -71,9 +71,9 @@ pipeline{
             	sendEmailNotification('Build Unstable')
         	}
         	
-        	unstable {
-            	echo 'The pipeline is unstable.'
-            	sendEmailNotification('Build Unstable')
+        	changed {
+            	echo 'The pipeline result has changed compared to the last run.'
+            	sendEmailNotification('Build Result Changed')
         	}
 		}
 }
