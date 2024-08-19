@@ -29,6 +29,21 @@ pipeline{
             	}
        		}
 
+           	// Use of try/catch
+           	stage('Run Deploy the build') {
+				steps {
+					script{
+					      try{
+					     		bat 'mvn deploy'
+				          } catch(Exception e){
+				          		echo "Caught exception: ${e}"
+				          	    //Error handling
+				          	    currentBuild.result = 'FAILURE'
+				          }
+					}
+        		}
+			}
+			
 			// Deploy the build
 			stage('Run Deploy the build') {
 				steps {
@@ -39,6 +54,7 @@ pipeline{
             		}
         		}
 			}
+		
 		
 			// Run REST Assured tests
 			stage('Run REST Assured Tests') {
