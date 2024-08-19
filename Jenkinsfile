@@ -45,7 +45,7 @@ pipeline{
 			}
 			
 			// Use of catchError for error handling
-			stage('Deploy: Error handliong with catchError') {
+			/*stage('Deploy: Error handliong with catchError') {
 				steps {
 					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 		bat 'mvn deploy'
@@ -53,14 +53,14 @@ pipeline{
         		}
 			}
 			
-			// Use of retry for error handling
+
 			stage('Deploy:Use of retry for error handling') {
 				steps {
 			    		retry(3){
                 		bat 'mvn deploy'
 						}
             		}
-			}
+			}*/
 		
 		
 			// Run REST Assured tests
