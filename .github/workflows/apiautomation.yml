@@ -20,7 +20,7 @@ jobs:
     
     strategy:
       matrix:
-        attempts: [1, 2, 3]
+        attempts: [1]
         
     steps:
     - name: Checkout Code
