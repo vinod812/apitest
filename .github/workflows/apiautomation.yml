@@ -48,8 +48,8 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Deploy with Maven
-      run: mvn deploy
+    #- name: Deploy with Maven
+    #  run: mvn deploy
 
     - name: Run REST Assured Tests
       run: mvn test
