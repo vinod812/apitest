@@ -1,3 +1,4 @@
+package newpack;
 import org.testng.annotations.Test;
 
 public class MyClass {
