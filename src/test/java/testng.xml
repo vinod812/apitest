@@ -9,7 +9,8 @@
     </listeners>
     <test name="Test">
          <classes>
-           <class name="newpack.RestTest1408"/>
+         <!--     <class name="newpack.RestTest1408"/>-->
+            <class name="newpack.MyClass"/>
   
         </classes>
      <!--       <packages>
