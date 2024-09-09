@@ -1,5 +1,6 @@
 public class MyClass {
-  public static void main(String args[]) {
+  @Test
+  public void restTesting99() throws Exception {
     int x=10;
     int y=25;
     int z=x+y;
