@@ -8,14 +8,14 @@
         <listener class-name="utility.ExtentReportListener" />
     </listeners>
     <test name="Test">
-         <classes>
-         <!--     <class name="newpack.RestTest1408"/>-->
+         <!--   <classes>
+           <class name="newpack.RestTest1408"/>
             <class name="newpack.MyClass"/>
   
-        </classes>
-     <!--       <packages>
-            <package name="ui"/>
-        </packages> -->
+        </classes>-->
+        <packages>
+            <package name="newpack"/>
+        </packages> 
     </test>
 
     <!-- Add more tests as needed -->
