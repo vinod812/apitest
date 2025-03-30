@@ -81,22 +81,22 @@ pipeline{
 			
 			success{
 			    echo 'The pipeline succeeded!'
-            	sendEmailNotification('Build Succeeded')
+            	//sendEmailNotification('Build Succeeded')
 			}
 		
 			failure {
             	echo 'The pipeline failed.'
-            	sendEmailNotification('Build Failed')
+            	//sendEmailNotification('Build Failed')
        		}
        		
        		unstable {
             	echo 'The pipeline is unstable.'
-            	sendEmailNotification('Build Unstable')
+            	//sendEmailNotification('Build Unstable')
         	}
         	
         	changed {
             	echo 'The pipeline result has changed compared to the last run.'
-            	sendEmailNotification('Build Result Changed')
+            	//sendEmailNotification('Build Result Changed')
         	}
 		}
 }
