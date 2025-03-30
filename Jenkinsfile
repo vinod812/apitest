@@ -5,14 +5,7 @@ pipeline{
 	    maven 'mvn3.9.8' // The name given in Global Tool Configuration
 	}
 	stages{
-	        //Checkout
-			/*stage('Checkout') {
-            	steps {
-            		// Checkout code from version control
-                	git 'https://github.com/vinod812/azure-voting-app-redisall.git'
-          		}
-       		}
-		
+	     
 		    //Verify the branch
 			stage("Verify Branch")
 			{
@@ -27,14 +20,14 @@ pipeline{
                 	// Compile the project and run unit tests
                 	bat 'mvn clean install'
             	}
-       		}*/
+       		}
 
            	// Use of try/catch
-           	/*stage('Deploy:Error handling with try catch') {
+           	stage('Deploy:Error handling with try catch') {
 				steps {
 					script{
 					      try{
-					     		bat 'mvn deploy'
+					     		bat 'mvn test'
 				          } catch(Exception e){
 				          		echo "Caught exception: ${e}"
 				          	    //Error handling
@@ -42,13 +35,13 @@ pipeline{
 				          }
 					}
         		}
-			}*/
+			}
 			
 			// Use of catchError for error handling
-			/*stage('Deploy: Error handliong with catchError') {
+			stage('Deploy: Error handling with catchError') {
 				steps {
 					catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                		bat 'mvn deploy'
+                		bat 'mvn test'
             		}
         		}
 			}
@@ -57,10 +50,10 @@ pipeline{
 			stage('Deploy:Use of retry for error handling') {
 				steps {
 			    		retry(3){
-                		bat 'mvn deploy'
+                		bat 'mvn test'
 						}
             		}
-			}*/
+			}
 		
 		
 			// Run REST Assured tests
