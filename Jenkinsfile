@@ -4,8 +4,7 @@ pipeline{
 	tools {
 	    maven 'mvn3.9.8' // The name given in Global Tool Configuration
 	}
-	stages{
-	     
+	stages{	     
 		    //Verify the branch
 			stage("Verify Branch")
 			{
