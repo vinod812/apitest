@@ -6,7 +6,7 @@ pipeline{
 	}
 	stages{
 	        //Checkout
-			stage('Checkout') {
+			/*stage('Checkout') {
             	steps {
             		// Checkout code from version control
                 	git 'https://github.com/vinod812/azure-voting-app-redisall.git'
@@ -27,10 +27,10 @@ pipeline{
                 	// Compile the project and run unit tests
                 	bat 'mvn clean install'
             	}
-       		}
+       		}*/
 
            	// Use of try/catch
-           	stage('Deploy:Error handling with try catch') {
+           	/*stage('Deploy:Error handling with try catch') {
 				steps {
 					script{
 					      try{
@@ -42,7 +42,7 @@ pipeline{
 				          }
 					}
         		}
-			}
+			}*/
 			
 			// Use of catchError for error handling
 			/*stage('Deploy: Error handliong with catchError') {
