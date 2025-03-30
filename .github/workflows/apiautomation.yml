@@ -1,5 +1,4 @@
 name: CI Pipeline
-
 on:
   push:
     branches:
@@ -8,20 +7,14 @@ on:
     branches:
       - master  # or the branch you want to trigger the workflow
   workflow_dispatch: # Allow manual trigger
-  
   schedule:
     - cron: "0 0 * * *"  # Runs every day at midnight (UTC)  Schedule:
-
-
-
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use Ubuntu for running Maven commands
-    
+    runs-on: ubuntu-latest  # Use Ubuntu for running Maven commands 
     strategy:
       matrix:
-        attempts: [1]
-        
+        attempts: [1]   
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
@@ -47,9 +40,6 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
-
-    #- name: Deploy with Maven
-    #  run: mvn deploy
 
     - name: Run REST Assured Tests
       run: mvn test
