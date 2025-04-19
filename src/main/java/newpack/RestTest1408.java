@@ -26,7 +26,7 @@ import io.restassured.specification.ResponseSpecification;
 import utility.ExtentReportListener;
 import utility.RestAssuredLoggingFilter;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import utility.PasswordEncryptor;
+
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -79,8 +79,8 @@ public class RestTest1408{
 	@Test
 	public void restTesting() throws Exception {
 		  String Password = "PasswordHere"; // Your encrypted password
-		  String EncryptedPassword= PasswordEncryptor.encrypt(Password, ENCRYPTION_KEY);
-		  String DecryptedPassword= PasswordEncryptor.decrypt(EncryptedPassword, ENCRYPTION_KEY);
+		  //String EncryptedPassword= PasswordEncryptor.encrypt(Password, ENCRYPTION_KEY);
+		  //String DecryptedPassword= PasswordEncryptor.decrypt(EncryptedPassword, ENCRYPTION_KEY);
 		
 		  Map<String, String> payLoad=new HashMap();
 		  payLoad.put("name", "John Doe");

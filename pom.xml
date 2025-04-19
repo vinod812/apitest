@@ -72,7 +72,12 @@
     <version>1.9.0</version>
 </dependency>
     
-
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.18.30</version> <!-- latest as of now -->
+  <scope>provided</scope>
+</dependency>
    <!-- JSON Schema Validator dependency -->
     <dependency>
         <groupId>io.rest-assured</groupId>
@@ -95,11 +100,17 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.2.5</version> <!-- Use the latest stable version -->
             <configuration>
-                <source>8</source> <!-- or 11, 17 depending on your Java version -->
-                <target>8</target> <!-- or 11, 17 depending on your Java version -->
+                <source>17</source> <!-- or 11, 17 depending on your Java version -->
+                <target>17</target> <!-- or 11, 17 depending on your Java version -->
                      <suiteXmlFiles>
                     <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
+                    <compilerArgs>
+      <arg>--add-exports</arg>
+      <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+      <arg>--add-opens</arg>
+      <arg>jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+    </compilerArgs>
             </configuration>
         </plugin>
     </plugins>

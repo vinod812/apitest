@@ -10,7 +10,6 @@ import com.aventstack.extentreports.Status;
 
 public class RestAssuredLoggingFilter implements Filter {
 
-    @Override
     public Response filter(FilterableRequestSpecification requestSpec, FilterableResponseSpecification responseSpec, FilterContext ctx) {
         // Log request details
         ExtentReportListener.getTest().log(Status.INFO, "Request URI: " + requestSpec.getURI());

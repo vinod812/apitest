@@ -16,7 +16,6 @@ public class ExtentReportListener implements ITestListener, ISuiteListener {
     private static final ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     private static final Map<String, ExtentTest> extentTestMap = new HashMap<>();
 
-    @Override
     public void onStart(ISuite suite) {
     	ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extent-report.html");
         htmlReporter.config().setTheme(Theme.STANDARD);

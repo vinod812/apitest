@@ -8,7 +8,6 @@ import java.util.List;
 
 public class CustomReporter implements IReporter {
 
-    @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
         // Implement your custom report generation logic here
         for (ISuite suite : suites) {
